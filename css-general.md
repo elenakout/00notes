@@ -59,6 +59,21 @@ Utility classes are very simple classes which only hane one goal
 
 ## Margin-bottom
 
+```css
+.mb-sm {
+  margin-bottom: 2rem;
+}
+.mb-md {
+  margin-bottom: 3rem;
+}
+.mb-lg {
+  margin-bottom: 4rem;
+}
+.mb-hg {
+  margin-bottom: 8rem;
+}
+```
+
 ---
 
 ## FontAwsome
