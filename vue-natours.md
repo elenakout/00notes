@@ -68,38 +68,7 @@ We put the `transform` property to the element we want
 
 ---
 
-## Utility Classes
 
-Utility classes are very simple classes which only hane one goal
-
-```css
-.u-center-text {
-  text-align: center;
-}
-
-.u-margin-bottom-8 {
-  margin-bottom: 8rem;
-}
-```
-
----
-
-## FontAwsome
-
-```html
-<link
-  rel="stylesheet"
-  href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-  integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-  crossorigin="anonymous"
-/>
-```
-
-```css
-<i class="fas fa-globe"></i>
-```
-
----
 
 ## Skew A section
 
