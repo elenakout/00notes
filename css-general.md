@@ -92,3 +92,9 @@ Utility classes are very simple classes which only hane one goal
 ```
 
 ---
+
+## Shadows
+
+```css
+box-shadow: 0 2rem 5rem rgba(#000, 0.1);
+```
