@@ -24,3 +24,26 @@ module.exports = {
   }
 }
 ```
+
+# Class Binding
+
+## Array Syntax
+
+We can pass an array to v-bind:class to apply a list of classes:
+
+```html
+<div v-bind:class="[activeClass, errorClass]"></div>
+```
+
+```js
+data: {
+activeClass: 'active',
+errorClass: 'text-danger'
+}
+```
+
+Which will render:
+
+```html
+<div class="active text-danger"></div>
+```
