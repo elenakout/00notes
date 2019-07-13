@@ -47,3 +47,34 @@ Which will render:
 ```html
 <div class="active text-danger"></div>
 ```
+
+# Images binding
+
+```js
+image: require("@/assets/img/gal-8.jpeg"),
+```
+
+---
+
+# Deploy to github pages
+
+1. Create a new local branch in your project and name it ‘gh-pages’.
+
+2. Go to github and copy the name of the repository. Let’s assume the repository name is ‘my-first-project’
+
+3. Create a new file in root directory of your project and name it `vue.config.js`.
+
+In ‘vue.config.js’ file paste the following code:
+// vue.config.js
+module.exports = {
+publicPath: ‘<my-first-project>’
+}
+NOTE: in publicPathinside the <> chars you have to put the name of your project. Specifically read here why.
+Find and open the file .gitignore located in root directory of your project.Next, find and comment the line which has the text ‘/dist’.
+NOTE: this folder it’s ignored by default that’s why we have to comment it.
+Run npm run build, and wait for it to finish.
+IMPORTANT!! Before you run the next command make sure you don’t commit the .gitignore and vue.config.js.
+Run the command:
+git add dist && git commit -m "Initial dist subtree commit"
+Run the command: git subtree push --prefix dist origin gh-pages
+Navigate to github on your browser and open your repository.
