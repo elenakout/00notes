@@ -98,3 +98,76 @@ Utility classes are very simple classes which only hane one goal
 ```css
 box-shadow: 0 2rem 5rem rgba(#000, 0.1);
 ```
+
+---
+
+# SCSS Folder Stracture
+
+- styles
+  - abstract
+    - \_mixins.scss
+    - \_variables.scss
+  - base
+    - \_animations.scss
+    - \_typografy.scss
+    - \_utilities.scss
+    - \_base.scss
+  - components
+    - \_card.scss
+    - \_form.scss
+    - \_feature-box.scss
+  - layout
+    - \_footer.scss
+    - \_grid.scss
+    - \_header.scss
+    - \_navigation_scss
+    - \_popup.scss
+  - pages
+    - \_home.scss
+
+main.scss
+
+---
+
+## The 7-1 Pattern
+
+```scss
+sass/
+|
+|– abstracts/ (or utilities/)
+|   |– _variables.scss    // Sass Variables
+|   |– _functions.scss    // Sass Functions
+|   |– _mixins.scss       // Sass Mixins
+|
+|– base/
+|   |– _reset.scss        // Reset/normalize
+|   |– _typography.scss   // Typography rules
+|
+|– components/ (or modules/)
+|   |– _buttons.scss      // Buttons
+|   |– _carousel.scss     // Carousel
+|   |– _slider.scss       // Slider
+|
+|– layout/
+|   |– _navigation.scss   // Navigation
+|   |– _grid.scss         // Grid system
+|   |– _header.scss       // Header
+|   |– _footer.scss       // Footer
+|   |– _sidebar.scss      // Sidebar
+|   |– _forms.scss        // Forms
+|
+|– pages/
+|   |– _home.scss         // Home specific styles
+|   |– _about.scss        // About specific styles
+|   |– _contact.scss      // Contact specific styles
+|
+|– themes/
+|   |– _theme.scss        // Default theme
+|   |– _admin.scss        // Admin theme
+|
+|– vendors/
+|   |– _bootstrap.scss    // Bootstrap
+|   |– _jquery-ui.scss    // jQuery UI
+|
+`– main.scss              // Main Sass file
+```

@@ -6,7 +6,7 @@ Create a folder within the src folder named styles. This is where we will store 
 
 In the Vue Project Manager, go to the Plugins tab and click on the Add plugin button. We want to install a plugin called
 
-> `vue-cli-plugin-style-resources-loader`
+> vue-cli-plugin-style-resources-loader
 
 Once this has installed, it will add a file to the root of your project called vue.config.js
 
@@ -56,25 +56,34 @@ image: require("@/assets/img/gal-8.jpeg"),
 
 ---
 
-# Deploy to github pages
+# Firestore Upload Img
 
-1. Create a new local branch in your project and name it ‘gh-pages’.
+Template
 
-2. Go to github and copy the name of the repository. Let’s assume the repository name is ‘my-first-project’
+```html
+<input type="file" @change="onFileChanged" />
+<button @click.prevent="onUpload">Upload!</button>
+```
 
-3. Create a new file in root directory of your project and name it `vue.config.js`.
+Script
 
-In ‘vue.config.js’ file paste the following code:
-// vue.config.js
-module.exports = {
-publicPath: ‘<my-first-project>’
+```js
+onFileChanged(event) {
+    this.selectedFile = event.target.files[0]
+},
+onUpload() {
+  // upload file, get it from this.selectedFile
+  firebase
+    .storage()
+    .ref('photos/' + this.selectedFile.name)
+    .put(this.selectedFile)
+    .then(response => {
+      response.ref.getDownloadURL().then(downloadURL => {
+        //  firebase.database().ref(YOUR_DATABASE).child(THE_USER_ID).update({imageUrl:downloadURL})
+        this.imgUp = downloadURL
+        console.log(downloadURL)
+      })
+    })
+  .catch(err => console.log(err))
 }
-NOTE: in publicPathinside the <> chars you have to put the name of your project. Specifically read here why.
-Find and open the file .gitignore located in root directory of your project.Next, find and comment the line which has the text ‘/dist’.
-NOTE: this folder it’s ignored by default that’s why we have to comment it.
-Run npm run build, and wait for it to finish.
-IMPORTANT!! Before you run the next command make sure you don’t commit the .gitignore and vue.config.js.
-Run the command:
-git add dist && git commit -m "Initial dist subtree commit"
-Run the command: git subtree push --prefix dist origin gh-pages
-Navigate to github on your browser and open your repository.
+```
