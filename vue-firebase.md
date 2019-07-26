@@ -1,3 +1,11 @@
+# Dependencies
+
+```js
+npm i firebase
+npm i moment
+npm i slugify
+```
+
 # Firebase Deploy
 
 1.

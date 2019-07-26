@@ -171,3 +171,14 @@ sass/
 |
 `– main.scss              // Main Sass file
 ```
+
+## Simple Stracture
+
+For a small project - a single page aplication
+
+```scss
+_base.scss
+_layout.scss
+_components.scss
+main.scss
+```
