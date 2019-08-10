@@ -19,7 +19,7 @@ module.exports = {
   pluginOptions: {
     'style-resources-loader': {
       preProcessor: 'scss',
-      patterns: [path.resolve(__dirname, './src/styles/global.scss')]
+      patterns: [path.resolve(__dirname, './src/styles/main.scss')]
     }
   }
 }
@@ -47,6 +47,70 @@ Which will render:
 ```html
 <div class="active text-danger"></div>
 ```
+
+## Object Syntax (true/false)
+
+We can pass an object to `v-bind:class` to dynamically toggle classes:
+
+```html
+<div v-bind:class="{ active: isActive }"></div>
+```
+
+You can have multiple classes toggled by having more fields in the object. In addition, the `v-bind:class` directive can also co-exist with the plain class attribute. So given the following template:
+
+```html
+<div
+  class="static"
+  v-bind:class="{ active: isActive, 'text-danger': hasError }"
+></div>
+```
+
+And the following data:
+
+```js
+data: {
+  isActive: true,
+  hasError: false
+}
+```
+
+It will render:
+
+```html
+<div class="static active"></div>
+```
+
+## Object Syntax (values in style)
+
+The object syntax for `v-bind:style` is pretty straightforward - it looks almost like CSS, except it’s a JavaScript object. You can use either camelCase or kebab-case (use quotes with kebab-case) for the CSS property names:
+
+```html
+<div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
+```
+
+```js
+data: {
+  activeColor: 'red',
+  fontSize: 30
+}
+```
+
+It is often a good idea to bind to a style object directly so that the template is cleaner:
+
+```html
+<div v-bind:style="styleObject"></div>
+```
+
+```js
+data: {
+  styleObject: {
+    color: 'red',
+    fontSize: '13px'
+  }
+}
+```
+
+---
 
 # Images binding
 
@@ -362,4 +426,76 @@ computed: {
   }
 
 </script>
+```
+
+## Wait for firebase to init before create the app
+
+> main.js
+
+```js
+import Vue from 'vue'
+import './plugins/vuetify'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+import firebase from 'firebase'
+import db from '@/firebase/init'
+
+Vue.config.productionTip = false
+
+let app
+
+const initialize = () => {
+  if (!app) {
+    app = new Vue({
+      router,
+      store,
+      render: h => h(App)
+    }).$mount('#app')
+  }
+}
+
+// wait for firebase to init before create the app
+firebase.auth().onAuthStateChanged(user => {
+  if (user) {
+    let ref = db.collection('users').where('user_id', '==', user.uid)
+
+    ref.get().then(snapshot => {
+      snapshot.forEach(doc => {
+        let usr = {
+          ...doc.data(),
+          id: doc.id,
+          email: user.email
+        }
+
+        store.commit('setUser', usr)
+      })
+    })
+  } else {
+    store.commit('setUser', null)
+  }
+  initialize()
+})
+```
+
+---
+
+# Truncate Filter
+
+```html
+<p>{{ message|truncate(20) }}</p>
+```
+
+```js
+filters: {
+    truncate: function(value, limit) {
+      if (value.length > limit) {
+        value = value.substring(0, (limit - 3)) + '...';
+      }
+
+
+      return value
+
+    }
+  }
 ```

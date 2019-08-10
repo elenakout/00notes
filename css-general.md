@@ -18,12 +18,29 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.6;
 }
 ```
 
+### Roboto Fonts
+
+```html
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+  rel="stylesheet"
+/>
+```
+
+```css
+font-family: 'Roboto', sans-serif;
+```
+### Unslpash images
+
+```html
+<img src="//unsplash.it/300/500
+```
 ---
 
 # CSS custom properties
@@ -57,7 +74,7 @@ Utility classes are very simple classes which only hane one goal
 }
 ```
 
-## Margin-bottom
+## Margin-bottom/
 
 ```css
 .mb-sm {

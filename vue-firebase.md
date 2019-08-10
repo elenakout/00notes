@@ -36,7 +36,7 @@ The answers are:
 4.
 
 ```js
-npm run built
+npm run build
 ```
 
 5.
