@@ -4,6 +4,9 @@
 npm i firebase
 npm i moment
 npm i slugify
+npm add vue-cli-plugin-style
+npm i vuelidate
+npm add vuetify
 ```
 
 # Firebase Deploy

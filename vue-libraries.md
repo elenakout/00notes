@@ -113,3 +113,25 @@ export default {
 }
 </style>
 ```
+
+# slugify
+
+```js
+npm i slugify
+```
+
+At component
+
+```js
+import slugify from 'slugify'
+```
+
+### Useage
+
+```js
+this.slug = slugify(this.username, {
+  replacement: '-',
+  remove: /[$_*+~.()'"!\-:@]/g,
+  lower: true
+})
+```
