@@ -139,3 +139,30 @@ filters: {
     }
   }
 ```
+
+# Router
+
+## Parameters
+
+> router.js
+
+```js
+{
+  path: '/r/:name',
+  name: subreddit,
+  component: Subreddits,
+}
+```
+
+### Call `router` inside a component
+
+```js
+$route.params.name
+```
+
+### Call a `route` with parameters
+
+```html
+<router-link :to="{ name: 'subreddit', params: { name: subreddit.name   }}">
+</router-link>
+```

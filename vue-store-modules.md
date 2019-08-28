@@ -51,3 +51,10 @@ export default {
 
 }
 ```
+# Example filter
+
+```js
+doneTodos: state => {
+  return state.todos.filter(todo => todo.done)
+}
+```
