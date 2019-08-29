@@ -1,4 +1,4 @@
-- [AOS](#aos)
+- [AOS](<#aos-(animate-on-scroll-webpage)>)
 
 # vue-carousel
 
@@ -140,7 +140,7 @@ this.slug = slugify(this.username, {
 
 ---
 
-# AOS
+# AOS (Animate On Scroll Webpage)
 
 - [Github Page](https://github.com/michalsnik/aos)
 - [Codepen example ](https://codepen.io/elenakout/pen/zYOzLaz)
