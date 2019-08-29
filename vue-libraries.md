@@ -1,4 +1,10 @@
-- [AOS](#aos)
+| Table of Contents             |
+| ----------------------------- |
+| [Vue-Carousel](#vue-carousel) |
+| [Slugify](#slugify)           |
+| [AOS](#aos)                   |
+
+---
 
 # vue-carousel
 
@@ -116,7 +122,7 @@ export default {
 </style>
 ```
 
-# slugify
+# Slugify
 
 ```js
 npm i slugify
@@ -140,7 +146,9 @@ this.slug = slugify(this.username, {
 
 ---
 
-# AOS (Animate On Scroll Webpage)
+# AOS
+
+(Animate On Scroll Webpage)
 
 - [Github Page](https://github.com/michalsnik/aos)
 - [Codepen example ](https://codepen.io/elenakout/pen/zYOzLaz)

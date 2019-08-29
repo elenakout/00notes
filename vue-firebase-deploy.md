@@ -1,3 +1,11 @@
+| Table of Contents                     |
+| ------------------------------------- |
+| [# Dependencies](#dependencies)       |
+| [# Firebase Deploy](#firebase-deploy) |
+| [# Init](#init)                       |
+
+---
+
 # Dependencies
 
 ```js

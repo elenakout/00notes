@@ -1,3 +1,9 @@
+| Table of Contents                                 |
+| ------------------------------------------------- |
+| [# Global Settings](#global-settings)             |
+| [# CSS custom properties](#css-custom-properties) |
+| [# SCSS Folder Stracture](#scss-folder-stracture) |
+
 # Global Settings
 
 ```css
@@ -36,11 +42,13 @@ body {
 ```css
 font-family: 'Roboto', sans-serif;
 ```
+
 ### Unslpash images
 
 ```html
 <img src="//unsplash.it/300/500
 ```
+
 ---
 
 # CSS custom properties

@@ -1,3 +1,12 @@
+| Table of Contents                                                                                       |
+| ------------------------------------------------------------------------------------------------------- |
+| [## Store](##store)                                                                                     |
+| [## SignUp Component](##signUp-component)                                                               |
+| [## Active User on Navbar](##active-user-on-navbar)                                                     |
+| [## Sign User out](##sign-user-out)                                                                     |
+| [## SignIn Component](##signin-component)                                                               |
+| [## Wait for firebase to init before create the app](##wait-for-firebase-to-init-before-create-the-app) |
+
 # USER AUTHENTICATION (firebase)
 
 ## Store

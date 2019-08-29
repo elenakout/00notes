@@ -1,3 +1,10 @@
+| Table of Contents                     |
+| ------------------------------------- |
+| [# How to use SVGs](#how-to-use-svgs) |
+| [# Using masks](#using-masks)         |
+
+---
+
 # How to use SVGs
 
 Download the svgs from `https://icomoon.io`

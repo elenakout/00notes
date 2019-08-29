@@ -1,6 +1,13 @@
-[Gradient Text Effect](##gradienttexteffect)
+| Table of Contents                                                                           |
+| ------------------------------------------------------------------------------------------- |
+| [## Gradient Text Effect](##gradient-text-effect)                                           |
+| [## Moving Text on Hover](##moving-text-on-hover)                                           |
+| [## Skew a section](##skew-a-section)                                                       |
+| [## Implement a full rotate on a card element](##implement-a-full-rotate-on-a-card-element) |
+| [## Background Blend Property](##background-blend-property)                                 |
+| [## Make Text go round](##make-text-go-round)                                               |
 
-[Skew a sectiont](##skewAsection)
+---
 
 ## Gradient Text Effect
 
@@ -68,9 +75,7 @@ We put the `transform` property to the element we want
 
 ---
 
-
-
-## Skew A section
+## Skew a section
 
 This will `skew` the hole section
 

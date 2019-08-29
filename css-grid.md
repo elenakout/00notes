@@ -1,3 +1,9 @@
+| Table of Contents                                 |
+| ------------------------------------------------- |
+| [# GRID Terminology](#grid-terminology)             |
+| [# CSS custom properties](#all-direct-children-selector) |
+| [# Grid areas](#grid-areas) |
+
 # GRID Terminology
 
 We have a `grid container`
@@ -44,7 +50,7 @@ grid-column: 1 / -1; // We define the start and -1 is the end
 }
 ```
 
-## Grid areas
+# Grid areas
 
 ```css
 grid-template-areas:

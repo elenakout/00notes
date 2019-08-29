@@ -1,3 +1,13 @@
+| Table of Contents                                     |
+| ----------------------------------------------------- |
+| [# Use Sass in vue project](#use-sass-in-vue-project) |
+| [# Class Binding](#class-binding)                     |
+| [# Images binding](#images-binding)                   |
+| [# Truncate Filter](#truncate-filter)                 |
+| [# Router](#router)                                   |
+
+---
+
 # Use Sass in vue project
 
 We choose Pre-processor: SCSS/SASS in `create-app`

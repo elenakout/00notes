@@ -1,3 +1,11 @@
+| Table of Contents                             |
+| --------------------------------------------- |
+| [# Installation](#installation)               |
+| [# Basic usage](#basic-usage)                 |
+| [# Work with vuelidate](#work-with-vuelidate) |
+
+---
+
 # Installation
 
 Package is installable via npm
