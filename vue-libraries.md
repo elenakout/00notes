@@ -1,4 +1,4 @@
-- [AOS](<#aos-(animate-on-scroll-webpage)>)
+- [AOS](#aos)
 
 # vue-carousel
 
