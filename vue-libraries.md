@@ -1,4 +1,4 @@
-- [AOS](#AOS)
+- [AOS](#aos)
 
 # vue-carousel
 
@@ -140,12 +140,12 @@ this.slug = slugify(this.username, {
 
 ---
 
-# AOS (Animate On Scroll Webpage)
+# AOS
 
 - [Github Page](https://github.com/michalsnik/aos)
 - [Codepen example ](https://codepen.io/elenakout/pen/zYOzLaz)
 
-To instal
+Installation
 
 ```js
 npm i aos
