@@ -135,3 +135,39 @@ this.slug = slugify(this.username, {
   lower: true
 })
 ```
+
+---
+
+# AOS (Animate On Scroll Webpage)
+
+- [Github Page](https://github.com/michalsnik/aos)
+- [Codepen example ](https://codepen.io/elenakout/pen/zYOzLaz)
+
+To instal
+
+```js
+npm i aos
+```
+
+We import an initialize inside `main.js`
+
+```js
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+new Vue({
+  crated() {
+    AOS.init()
+  }
+})
+```
+
+To use the library inside a component:
+
+```html
+<div data-aos="fade-up" data-aos-duration="4000"></div>
+```
+
+And we can use the other parametes like `duration` if we want in `init` or inline on an element.
+
+---
