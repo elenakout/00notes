@@ -5,6 +5,7 @@
 | [# Images binding](#images-binding)                   |
 | [# Truncate Filter](#truncate-filter)                 |
 | [# Router](#router)                                   |
+| [# Search Form](#search-form)                         |
 
 ---
 
@@ -175,4 +176,77 @@ $route.params.name
 ```html
 <router-link :to="{ name: 'subreddit', params: { name: subreddit.name   }}">
 </router-link>
+```
+
+# Search Form
+
+To create a search form localy inside the component:
+
+1. Create an search form
+
+```html
+<input v-model="searchTerm" type="text" />
+```
+
+2. Add the `searchTerm` to data
+
+```js
+data: () => ({
+  searchTerm: ''
+})
+```
+
+3. Create a `computed` property and when there is a search term we return the filtered array of data
+
+```js
+computed: {
+  filteredPosts() {
+    if( this.searchTerm) {
+      return this.posts.filter(post => {
+        return post.title.includes(this.searchTerm);
+      });
+    }
+    return this.posts;
+  }
+}
+```
+
+4. For this to work we use `filteredPosts` in the `v-for`
+
+```html
+<div class="card" v-for="(post, index) in filteredPosts" :key="post.id"></div>
+```
+
+5. To make the search not case sensitive
+
+```js
+computed: {
+  filteredPosts() {
+    if( this.searchTerm) {
+      const regexp = new RegExp(this.searchTerm, 'gi')
+      return this.posts.filter(post => {
+        return post.title.match(regexp);
+      });
+    }
+    return this.posts;
+  }
+}
+```
+
+6. We can search also the `description` for the `searchTerm`
+
+   we add the extra field
+
+```js
+computed: {
+  filteredPosts() {
+    if( this.searchTerm) {
+      const regexp = new RegExp(this.searchTerm, 'gi')
+      return this.posts.filter(post => {
+        return (post.title + post.description).match(regexp);
+      });
+    }
+    return this.posts;
+  }
+}
 ```
