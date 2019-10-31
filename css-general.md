@@ -126,6 +126,16 @@ box-shadow: 0 2rem 5rem rgba(#000, 0.1);
 
 ---
 
+## MetaTags
+
+```html
+<meta name="description" content="Free Web tutorials" />
+<meta name="keywords" content="HTML,CSS,XML,JavaScript" />
+<meta name="author" content="John Doe" />
+```
+
+---
+
 # SCSS Folder Stracture
 
 - styles
@@ -199,7 +209,7 @@ sass/
 
 ## Simple Stracture
 
-For a small project - a single page aplication
+For a small project - a single page apllication
 
 ```scss
 _base.scss
